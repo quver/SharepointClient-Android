@@ -16,7 +16,6 @@ package pl.quver.sharepointmobileclient.components.activities;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +38,7 @@ import pl.quver.sharepointmobileclient.BuildConfig;
 import pl.quver.sharepointmobileclient.Configuration;
 import pl.quver.sharepointmobileclient.R;
 import pl.quver.sharepointmobileclient.components.adapters.TasksListAdapter;
-import pl.quver.sharepointmobileclient.rest.models.Task;
+import pl.quver.sharepointmobileclient.rest.models.TaskEntity;
 import pl.quver.sharepointmobileclient.rest.services.TasksService;
 
 /**
@@ -51,7 +50,7 @@ import pl.quver.sharepointmobileclient.rest.services.TasksService;
  * @version 1.0
  * @since 19.04.15
  * @see pl.quver.sharepointmobileclient.rest.services.TasksService
- * @see pl.quver.sharepointmobileclient.rest.models.Task
+ * @see pl.quver.sharepointmobileclient.rest.models.TaskEntity
  */
 
 @EActivity(R.layout.activity_main)
@@ -135,7 +134,7 @@ public class MainActivity extends Activity {
             public void onItemClick(AdapterView<?> av, View view, int i, long l) {
                 System.out.println(mTasksAdapter.getItem(i));
 
-                DetailsActivity_.intent(mContext).taskObject(mTasksAdapter.getItem(i)).start();
+                DetailsActivity_.intent(mContext).taskEntity(mTasksAdapter.getItem(i)).start();
             }
         });
     }
@@ -153,7 +152,7 @@ public class MainActivity extends Activity {
              */
             mTasksService.setHeader("Cookie", "rtFa=" + mRtfa + "; FedAuth=" + mFedAuth);
 
-            List<Task> responseList = Collections.emptyList();
+            List<TaskEntity> responseList = Collections.emptyList();
 
             try {
                 responseList = mTasksService.getTasksList().getmValues();
@@ -164,8 +163,8 @@ public class MainActivity extends Activity {
             updateList(responseList);
 
             if(BuildConfig.DEBUG) {
-                for (Task task : responseList) {
-                    System.out.println(task.toString());
+                for (TaskEntity taskEntity : responseList) {
+                    System.out.println(taskEntity.toString());
                 }
             }
         }
@@ -176,7 +175,7 @@ public class MainActivity extends Activity {
      * @param updatedList
      */
     @UiThread
-    protected void updateList(List<Task> updatedList) {
+    protected void updateList(List<TaskEntity> updatedList) {
         mTasksList.setAdapter(mTasksAdapter);
         mTasksAdapter.setmTasksList(updatedList);
     }

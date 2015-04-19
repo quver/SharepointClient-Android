@@ -27,24 +27,24 @@ import java.util.List;
  * @version 1.0
  * @since 19.04.15
  */
-public class TasksContainer {
+public class TasksContainerEntity {
     public static class Columns {
         public static final String CONTAINER = "value";
     }
 
     @SerializedName(Columns.CONTAINER)
-    private List<Task> mValues;
+    private List<TaskEntity> mValues;
 
-    public List<Task> getmValues() {
+    public List<TaskEntity> getmValues() {
         return mValues;
     }
 
-    public void setmValues(List<Task> mValues) {
+    public void setmValues(List<TaskEntity> mValues) {
         this.mValues = mValues;
     }
 
     /**
      * Dummy constructor
      */
-    public TasksContainer(){}
+    public TasksContainerEntity(){}
 }

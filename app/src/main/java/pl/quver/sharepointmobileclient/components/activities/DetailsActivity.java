@@ -18,14 +18,13 @@ package pl.quver.sharepointmobileclient.components.activities;
 import android.app.Activity;
 import android.widget.TextView;
 
-import org.androidannotations.annotations.AfterExtras;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ViewById;
 
 import pl.quver.sharepointmobileclient.R;
-import pl.quver.sharepointmobileclient.rest.models.Task;
+import pl.quver.sharepointmobileclient.rest.models.TaskEntity;
 
 /**
  * Class DetailsActivity of pl.quver.sharepointmobileclient.components.activities
@@ -39,7 +38,7 @@ import pl.quver.sharepointmobileclient.rest.models.Task;
 public class DetailsActivity extends Activity {
 
     @Extra
-    protected Task taskObject;
+    protected TaskEntity taskEntity;
 
     @ViewById(R.id.text_details_id)
     protected TextView mId;
@@ -59,11 +58,11 @@ public class DetailsActivity extends Activity {
     @AfterViews
     protected void bind() {
         try {
-            mId.setText(String.valueOf(taskObject.getmId()));
-            mTitle.setText(String.valueOf(taskObject.getmTitle()));
-            mClientName.setText(String.valueOf(taskObject.getmTitle()));
-            mClientAddress.setText(String.valueOf(taskObject.getmTitle()));
-            mDescription.setText(String.valueOf(taskObject.getmTitle()));
+            mId.setText(String.valueOf(taskEntity.getmId()));
+            mTitle.setText(String.valueOf(taskEntity.getmTitle()));
+            mClientName.setText(String.valueOf(taskEntity.getmTitle()));
+            mClientAddress.setText(String.valueOf(taskEntity.getmTitle()));
+            mDescription.setText(String.valueOf(taskEntity.getmTitle()));
         } catch (Exception e) {
             e.printStackTrace();
         }

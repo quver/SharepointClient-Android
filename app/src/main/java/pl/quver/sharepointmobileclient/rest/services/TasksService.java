@@ -22,7 +22,7 @@ import org.androidannotations.api.rest.MediaType;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 
 import pl.quver.sharepointmobileclient.Configuration;
-import pl.quver.sharepointmobileclient.rest.models.TasksContainer;
+import pl.quver.sharepointmobileclient.rest.models.TasksContainerEntity;
 
 /**
  * Interface TasksService of pl.quver.sharepointmobileclient.rest.services.
@@ -42,14 +42,14 @@ public interface TasksService {
     /**
      * Method for /items endpoint
      *
-     * @see pl.quver.sharepointmobileclient.rest.models.TasksContainer
-     * @see pl.quver.sharepointmobileclient.rest.models.Task
+     * @see pl.quver.sharepointmobileclient.rest.models.TasksContainerEntity
+     * @see pl.quver.sharepointmobileclient.rest.models.TaskEntity
      * @return Multilevel object with API response
      */
     @Get("/items")
     @RequiresHeader("Cookie")
     @Accept(MediaType.APPLICATION_JSON)
-    TasksContainer getTasksList();
+    TasksContainerEntity getTasksList();
 
     void setHeader(String name, String value);
     String getHeader(String name);

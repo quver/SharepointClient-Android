@@ -19,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 /**
- * Class Task of pl.quver.sharepointmobileclient.rest.models.
+ * Class TaskEntity of pl.quver.sharepointmobileclient.rest.models.
  *
  * Model contains Id, Title
  *
@@ -27,7 +27,7 @@ import java.io.Serializable;
  * @version 1.0
  * @since 19.04.15
  */
-public class Task implements Serializable {
+public class TaskEntity implements Serializable {
     private static final long serialVersionUID = 6301788713967645642L;
 
     public static class Columns {
@@ -65,13 +65,13 @@ public class Task implements Serializable {
 
     @Override
     public String toString() {
-        return "Task{" +
+        return "TaskEntity{" +
                 "mId=" + mId +
                 ", mTitle='" + mTitle + '\'' +
                 '}';
     }
 
-    public Task(int mId, String mTitle) {
+    public TaskEntity(int mId, String mTitle) {
         this.mId = mId;
         this.mTitle = mTitle;
     }

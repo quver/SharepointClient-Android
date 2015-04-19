@@ -22,18 +22,18 @@ import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
 import pl.quver.sharepointmobileclient.R;
-import pl.quver.sharepointmobileclient.rest.models.Task;
+import pl.quver.sharepointmobileclient.rest.models.TaskEntity;
 
 /**
  * Class TaskRow of pl.quver.sharepointmobileclient.components.viewgroups.
  *
- * Class for binding row_task.xml layout with Task model
+ * Class for binding row_task.xml layout with TaskEntity model
  *
  * @author quver
  * @version 1.0
  * @since 19.04.15
  * @see pl.quver.sharepointmobileclient.components.adapters.TasksListAdapter
- * @see pl.quver.sharepointmobileclient.rest.models.Task
+ * @see pl.quver.sharepointmobileclient.rest.models.TaskEntity
  */
 
 @EViewGroup(R.layout.row_task)
@@ -55,11 +55,11 @@ public class TaskRow extends LinearLayout {
     }
 
     /**
-     * Method bind <class>Task</class> with text views of row_task.xml
-     * @param task
+     * Method bind <class>TaskEntity</class> with text views of row_task.xml
+     * @param taskEntity
      */
-    public void bind(Task task) {
-        idText.setText(String.valueOf(task.getmId()));
-        titleText.setText(String.valueOf(task.getmTitle()));
+    public void bind(TaskEntity taskEntity) {
+        idText.setText(String.valueOf(taskEntity.getmId()));
+        titleText.setText(String.valueOf(taskEntity.getmTitle()));
     }
 }

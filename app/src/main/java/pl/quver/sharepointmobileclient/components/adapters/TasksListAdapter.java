@@ -25,7 +25,7 @@ import org.androidannotations.annotations.RootContext;
 import java.util.Collections;
 import java.util.List;
 
-import pl.quver.sharepointmobileclient.rest.models.Task;
+import pl.quver.sharepointmobileclient.rest.models.TaskEntity;
 import pl.quver.sharepointmobileclient.components.viewgroups.TaskRow;
 import pl.quver.sharepointmobileclient.components.viewgroups.TaskRow_;
 
@@ -37,34 +37,34 @@ import pl.quver.sharepointmobileclient.components.viewgroups.TaskRow_;
  * @author quver
  * @version 1.0
  * @since 19.04.15
- * @see pl.quver.sharepointmobileclient.rest.models.Task
+ * @see pl.quver.sharepointmobileclient.rest.models.TaskEntity
  */
 
 @EBean
 public class TasksListAdapter extends BaseAdapter {
 
     /**
-     * List of <class>Task</class> objects
+     * List of <class>TaskEntity</class> objects
      */
-    List<Task> mTasksList = Collections.emptyList();
+    List<TaskEntity> mTasksList = Collections.emptyList();
 
     @RootContext
     Context context;
 
     /**
      * Method perform TasksList update on MainActivity
-     * @param updatedList list of <class>Task</class> objects
+     * @param updatedList list of <class>TaskEntity</class> objects
      */
-    public void setmTasksList(List<Task> updatedList) {
+    public void setmTasksList(List<TaskEntity> updatedList) {
         mTasksList = updatedList;
         notifyDataSetChanged();
     }
 
     /**
      * Dummy getter
-     * @return List of <class>Task</class> objects
+     * @return List of <class>TaskEntity</class> objects
      */
-    public List<Task> getmTasksList () {
+    public List<TaskEntity> getmTasksList () {
         return mTasksList;
     }
 
@@ -88,7 +88,7 @@ public class TasksListAdapter extends BaseAdapter {
     }
 
     @Override
-    public Task getItem(int position) {
+    public TaskEntity getItem(int position) {
         return mTasksList.get(position);
     }
 
