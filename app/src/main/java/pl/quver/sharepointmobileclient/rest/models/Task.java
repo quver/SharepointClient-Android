@@ -16,6 +16,8 @@ package pl.quver.sharepointmobileclient.rest.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Class Task of pl.quver.sharepointmobileclient.rest.models.
  *
@@ -25,15 +27,23 @@ import com.google.gson.annotations.SerializedName;
  * @version 1.0
  * @since 19.04.15
  */
-public class Task {
+public class Task implements Serializable {
+    private static final long serialVersionUID = 6301788713967645642L;
+
     public static class Columns {
         public static final String ID = "Id";
         public static final String TITLE = "Title";
     }
 
+    /**
+     * @serialField
+     */
     @SerializedName(Columns.ID)
     private int mId;
 
+    /**
+     * @serialField
+     */
     @SerializedName(Columns.TITLE)
     private String mTitle;
 
@@ -61,8 +71,8 @@ public class Task {
                 '}';
     }
 
-    /**
-     * Dummy constructor
-     */
-    public Task(){}
+    public Task(int mId, String mTitle) {
+        this.mId = mId;
+        this.mTitle = mTitle;
+    }
 }
