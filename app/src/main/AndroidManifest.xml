@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/app_name" android:name=".components.activities.WebLoginActivity_"/>
+        <activity android:label="@string/app_login_activity_label" android:name=".components.activities.LoginActivity_"/>
+        <activity android:label="@string/app_details_activity_label" android:name=".components.activities.DetailsActivity_"/>
     </application>
 
 </manifest>
