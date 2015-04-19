@@ -7,22 +7,22 @@
         android:id="@+id/text_task_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:height="40dp"
-        android:gravity="center_vertical|left"
-        android:textSize="20dp"
-        android:text = "login"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:height="@dimen/row_text_height"
+        android:gravity="center_vertical|start"
+        android:textSize="@dimen/row_text_size"
+        android:text="@string/app_placeholder"
+        android:paddingLeft="@dimen/row_text_padding"
+        android:paddingRight="@dimen/row_text_padding" />
 
     <TextView
         android:id="@+id/text_task_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:height="50dp"
-        android:gravity="center_vertical|left"
-        android:textSize="20dp"
-        android:text = "school"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:height="@dimen/row_text_height"
+        android:textSize="@dimen/row_text_size"
+        android:text="@string/app_placeholder"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="@dimen/row_text_padding"
+        android:paddingRight="@dimen/row_text_padding" />
 
 </LinearLayout>

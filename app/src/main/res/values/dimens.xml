@@ -5,4 +5,7 @@
 
     <!-- activity_details -->
     <dimen name="details_text_height">30dp</dimen>
+    <dimen name="row_text_padding">10dp</dimen>
+    <dimen name="row_text_height">50dp</dimen>
+    <dimen name="row_text_size">20sp</dimen>
 </resources>
