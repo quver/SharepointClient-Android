@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Pawel Quver 2015.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR 
+  ~ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+  ~ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+  ~ THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+  ~ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+  ~ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
+  ~ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+  ~ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+  ~ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:text="@string/task_id"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:id="@+id/text_details_id"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:text="@string/task_title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:id="@+id/text_details_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:text="@string/task_client_name"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:id="@+id/text_details_client_name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:text="@string/task_client_address"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_details_client_address"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:text="@string/task_description"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_details_description"/>
+    
+</LinearLayout>
