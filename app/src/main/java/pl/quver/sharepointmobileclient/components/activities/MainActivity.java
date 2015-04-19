@@ -16,8 +16,11 @@ package pl.quver.sharepointmobileclient.components.activities;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import org.androidannotations.annotations.AfterViews;
@@ -54,6 +57,7 @@ import pl.quver.sharepointmobileclient.rest.services.TasksService;
 @EActivity(R.layout.activity_main)
 public class MainActivity extends Activity {
 
+    protected Context mContext;
     protected String mFedAuth;
     protected String mRtfa;
     protected boolean mIsLogged = false;
@@ -103,6 +107,8 @@ public class MainActivity extends Activity {
             throw new AssertionError("Configuration cannot be empty");
         }
 
+        mContext = this;
+
         showLoginIfNeeded();
         performRequest();
     }
@@ -121,6 +127,17 @@ public class MainActivity extends Activity {
 
         //Cancel all background requests when activity disappear top
         BackgroundExecutor.cancelAll("restRequest", true);
+    }
+
+    @AfterViews
+    protected void click() {
+        mTasksList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> av, View view, int i, long l) {
+                System.out.println(mTasksAdapter.getItem(i));
+
+                DetailsActivity_.intent(mContext).taskObject(mTasksAdapter.getItem(i)).start();
+            }
+        });
     }
 
 

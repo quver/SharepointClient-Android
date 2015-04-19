@@ -60,6 +60,14 @@ public class TasksListAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    /**
+     * Dummy getter
+     * @return List of <class>Task</class> objects
+     */
+    public List<Task> getmTasksList () {
+        return mTasksList;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         TaskRow taskRowView;
