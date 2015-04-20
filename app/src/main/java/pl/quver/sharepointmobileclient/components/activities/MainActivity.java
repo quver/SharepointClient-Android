@@ -23,7 +23,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Background;;
+import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
@@ -172,7 +172,7 @@ public class MainActivity extends Activity {
 
     /**
      * Method update Tasks List View on UI Thread
-     * @param updatedList
+     * @param updatedList list of <class>TaskEntity</class> objects
      */
     @UiThread
     protected void updateList(List<TaskEntity> updatedList) {

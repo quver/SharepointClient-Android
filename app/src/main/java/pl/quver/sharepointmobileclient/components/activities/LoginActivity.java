@@ -52,11 +52,6 @@ public class LoginActivity extends Activity {
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mPreferencesEditor;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
     /**
      * Method shows webView and parse cookie for rfTa and FedAuth after Android Annotations inject
      */
@@ -89,14 +84,14 @@ public class LoginActivity extends Activity {
 
                         for (int i = 0; i <= separated.length - 1; i++) {
 
-                            if (separated[i].contains("rtFa") && RTFA != true) {
+                            if (separated[i].contains("rtFa") && !RTFA) {
                                 RTFA_Value = separated[i].substring(6);
                                 mPreferencesEditor.putString("RFTA", RTFA_Value);
                                 mPreferencesEditor.commit();
                                 RTFA = true;
                             }
 
-                            if (separated[i].contains("FedAuth") && FedAuth != true) {
+                            if (separated[i].contains("FedAuth") && !FedAuth) {
                                 FedAuth_Value = separated[i].substring(9);
                                 mPreferencesEditor.putString("FED_AUTH", FedAuth_Value);
                                 mPreferencesEditor.commit();

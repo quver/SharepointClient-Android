@@ -56,7 +56,7 @@ public class TaskRow extends LinearLayout {
 
     /**
      * Method bind <class>TaskEntity</class> with text views of row_task.xml
-     * @param taskEntity
+     * @param taskEntity list of <class>TaskEntity</class> objects
      */
     public void bind(TaskEntity taskEntity) {
         idText.setText(String.valueOf(taskEntity.getmId()));

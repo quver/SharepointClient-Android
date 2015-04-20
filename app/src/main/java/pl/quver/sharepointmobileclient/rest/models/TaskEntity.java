@@ -70,9 +70,4 @@ public class TaskEntity implements Serializable {
                 ", mTitle='" + mTitle + '\'' +
                 '}';
     }
-
-    public TaskEntity(int mId, String mTitle) {
-        this.mId = mId;
-        this.mTitle = mTitle;
-    }
 }

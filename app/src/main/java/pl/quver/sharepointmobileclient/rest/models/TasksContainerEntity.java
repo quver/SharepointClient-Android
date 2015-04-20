@@ -42,9 +42,4 @@ public class TasksContainerEntity {
     public void setmValues(List<TaskEntity> mValues) {
         this.mValues = mValues;
     }
-
-    /**
-     * Dummy constructor
-     */
-    public TasksContainerEntity(){}
 }
