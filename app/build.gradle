@@ -42,6 +42,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.0.0'
     apt "org.androidannotations:androidannotations:3.2"
     compile 'org.androidannotations:androidannotations-api:3.2'
-    compile 'org.springframework.android:spring-android-rest-template:2.0'
+    compile 'org.springframework.android:spring-android-rest-template:2.0+'
     compile 'com.google.code.gson:gson:2.3.1'
 }
