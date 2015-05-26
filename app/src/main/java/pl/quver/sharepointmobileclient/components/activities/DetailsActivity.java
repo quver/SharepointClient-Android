@@ -49,6 +49,9 @@ public class DetailsActivity extends Activity {
     @ViewById(R.id.text_details_client_name)
     protected TextView mClientName;
 
+    @ViewById(R.id.text_details_client_phone)
+    protected TextView mClientPhone;
+
     @ViewById(R.id.text_details_client_address)
     protected TextView mClientAddress;
 
@@ -58,11 +61,12 @@ public class DetailsActivity extends Activity {
     @AfterViews
     protected void bind() {
         try {
-            mId.setText(String.valueOf(taskEntity.getmId()));
-            mTitle.setText(String.valueOf(taskEntity.getmTitle()));
-            mClientName.setText(String.valueOf(taskEntity.getmTitle()));
-            mClientAddress.setText(String.valueOf(taskEntity.getmTitle()));
-            mDescription.setText(String.valueOf(taskEntity.getmTitle()));
+            mId.setText(String.valueOf(taskEntity.getmId().replaceAll("\\<.*?>", "")));
+            mTitle.setText(String.valueOf(taskEntity.getmTitle().replaceAll("\\<.*?>", "")));
+            mClientName.setText(String.valueOf(taskEntity.getmCustomer().replaceAll("\\<.*?>", "")));
+            mClientPhone.setText(String.valueOf(taskEntity.getmPhone().replaceAll("\\<.*?>", "")));
+            mClientAddress.setText(String.valueOf(taskEntity.getmAdress().replaceAll("\\<.*?>", "")));
+            mDescription.setText(String.valueOf(taskEntity.getmDescription().replaceAll("\\<.*?>", "")));
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -59,7 +59,7 @@ public class TaskRow extends LinearLayout {
      * @param taskEntity list of <class>TaskEntity</class> objects
      */
     public void bind(TaskEntity taskEntity) {
-        idText.setText(String.valueOf(taskEntity.getmId()));
-        titleText.setText(String.valueOf(taskEntity.getmTitle()));
+        idText.setText(String.valueOf(taskEntity.getmId().replaceAll("\\<.*?>", "")));
+        titleText.setText(String.valueOf(taskEntity.getmTitle().replaceAll("\\<.*?>", "")));
     }
 }

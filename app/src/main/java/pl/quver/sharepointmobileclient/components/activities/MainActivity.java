@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
@@ -66,14 +67,13 @@ public class MainActivity extends Activity {
 
     @Bean
     protected TasksListAdapter mTasksAdapter;
+    @RestService
+    protected TasksService mTasksService;
 
     @AfterViews
     void bindAdapter() {
         mTasksList.setAdapter(mTasksAdapter);
     }
-
-    @RestService
-    protected TasksService mTasksService;
 
     /**
      * Method checks is SharedPreferences contains rfTa and FedAuth for REST API requests
@@ -178,5 +178,8 @@ public class MainActivity extends Activity {
     protected void updateList(List<TaskEntity> updatedList) {
         mTasksList.setAdapter(mTasksAdapter);
         mTasksAdapter.setmTasksList(updatedList);
+
+        Toast.makeText(getApplicationContext(), updatedList.size() + " tasks recived", Toast.LENGTH_SHORT).show();
+
     }
 }

@@ -14,14 +14,15 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_horizontal_margin"
-    android:paddingStart="@dimen/activity_vertical_margin"
     android:paddingEnd="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_vertical_margin">
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingStart="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin">
 
     <TextView
         android:layout_width="match_parent"
@@ -30,11 +31,10 @@
         android:text="@string/task_id"
         android:textStyle="bold" />
     <TextView
+        android:id="@+id/text_details_id"
         android:layout_width="match_parent"
         android:layout_height="@dimen/details_text_height"
-        android:gravity="center_vertical|start"
-        android:id="@+id/text_details_id"
-        android:text="@string/app_placeholder" />
+        android:gravity="center_vertical|start" />
 
     <TextView
         android:layout_width="match_parent"
@@ -43,11 +43,10 @@
         android:text="@string/task_title"
         android:textStyle="bold" />
     <TextView
+        android:id="@+id/text_details_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/details_text_height"
-        android:gravity="center_vertical|start"
-        android:id="@+id/text_details_title"
-        android:text="@string/app_placeholder" />
+        android:gravity="center_vertical|start" />
 
     <TextView
         android:layout_width="match_parent"
@@ -56,11 +55,23 @@
         android:text="@string/task_client_name"
         android:textStyle="bold" />
     <TextView
+        android:id="@+id/text_details_client_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:gravity="center_vertical|start" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/details_text_height"
         android:gravity="center_vertical|start"
-        android:id="@+id/text_details_client_name"
-        android:text="@string/app_placeholder" />
+        android:text="@string/task_client_phone"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_details_client_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_text_height"
+        android:gravity="center_vertical|start" />
 
     <TextView
         android:layout_width="match_parent"
@@ -69,11 +80,10 @@
         android:text="@string/task_client_address"
         android:textStyle="bold" />
     <TextView
+        android:id="@+id/text_details_client_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical|start"
-        android:id="@+id/text_details_client_address"
-        android:text="@string/app_placeholder" />
+        android:gravity="center_vertical|start" />
 
     <TextView
         android:layout_width="match_parent"
@@ -82,10 +92,9 @@
         android:text="@string/task_description"
         android:textStyle="bold" />
     <TextView
+        android:id="@+id/text_details_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical|start"
-        android:id="@+id/text_details_description"
-        android:text="@string/app_placeholder" />
+        android:gravity="center_vertical|start" />
     
 </LinearLayout>

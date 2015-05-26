@@ -28,24 +28,49 @@ import java.io.Serializable;
  * @since 19.04.15
  */
 public class TaskEntity implements Serializable {
-    private static final long serialVersionUID = 6301788713967645642L;
-
-    public static class Columns {
-        public static final String ID = "Id";
-        public static final String TITLE = "Title";
-    }
-
+    private static final long serialVersionUID = 6794581071054319600L;
     /**
      * @serialField
      */
     @SerializedName(Columns.ID)
-    private int mId;
-
+    private String mId;
     /**
      * @serialField
      */
     @SerializedName(Columns.TITLE)
     private String mTitle;
+    /**
+     * @serialField
+     */
+    @SerializedName(Columns.CUSTOMER)
+    private String mCustomer;
+    /**
+     * @serialField
+     */
+    @SerializedName(Columns.DESCRIPTION)
+    private String mDescription;
+    /**
+     * @serialField
+     */
+    @SerializedName(Columns.ADDRESS)
+    private String mAdress;
+    /**
+     * @serialField
+     */
+    @SerializedName(Columns.PHONE)
+    private String mPhone;
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getmId() {
+        return mId;
+    }
+
+    public void setmId(String mId) {
+        this.mId = mId;
+    }
 
     public String getmTitle() {
         return mTitle;
@@ -55,19 +80,56 @@ public class TaskEntity implements Serializable {
         this.mTitle = mTitle;
     }
 
-    public int getmId() {
-        return mId;
+    public String getmCustomer() {
+        return mCustomer;
     }
 
-    public void setmId(int mId) {
-        this.mId = mId;
+    public void setmCustomer(String mCustomer) {
+        this.mCustomer = mCustomer;
+    }
+
+    public String getmDescription() {
+        return mDescription;
+    }
+
+    public void setmDescription(String mDescription) {
+        this.mDescription = mDescription;
+    }
+
+    public String getmAdress() {
+        return mAdress;
+    }
+
+    public void setmAdress(String mAdress) {
+        this.mAdress = mAdress;
+    }
+
+    public String getmPhone() {
+        return mPhone;
+    }
+
+    public void setmPhone(String mPhone) {
+        this.mPhone = mPhone;
     }
 
     @Override
     public String toString() {
         return "TaskEntity{" +
-                "mId=" + mId +
+                "mId='" + mId + '\'' +
                 ", mTitle='" + mTitle + '\'' +
+                ", mCustomer='" + mCustomer + '\'' +
+                ", mDescription='" + mDescription + '\'' +
+                ", mAdress='" + mAdress + '\'' +
+                ", mPhone='" + mPhone + '\'' +
                 '}';
+    }
+
+    public static class Columns {
+        public static final String ID = "ID_zlecenia";
+        public static final String TITLE = "Title";
+        public static final String CUSTOMER = "yzti";
+        public static final String DESCRIPTION = "jxub";
+        public static final String ADDRESS = "vo4v";
+        public static final String PHONE = "daes";
     }
 }
