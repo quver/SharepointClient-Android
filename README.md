@@ -9,3 +9,5 @@ and name of list (eg. Tasks)
 ```java
 public static final String LIST_NAME
 ```
+##Inspired by
+https://asheshany.wordpress.com/2013/07/18/connecting-to-sharepoint-2013-online-365-apis-in-android/
